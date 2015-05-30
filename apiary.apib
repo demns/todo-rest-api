@@ -74,10 +74,14 @@ This action allows you to change the status of the task.
 
             Location: /task/1
 
-## Tasks Collection [/tasks{?page}]
+## Tasks Collection [/tasks{?page}{?description}{?deadline}{?priority}{?category}]
 
 + Parameters
     + page: 1 (optional, number) - The page of tasks to return
+    + description  (string)
+    + deadline (string) - An ISO8601 date when the task need to be finished.
+    + priority (string) - Hi, Medium, Low
+    + category (string)
 
 ### List All Tasks [GET]
 
