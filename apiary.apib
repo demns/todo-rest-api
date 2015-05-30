@@ -57,11 +57,12 @@ A Task object has the following attributes:
             "status": "Normal"
         }
 
-## Choice [/questions/{question_id}/choices/{choice_id}]
+## Choice [/tasks/{task_id}/check/{check_status}]
 
 + Parameters
-    + question_id: 1 (required, number) - ID of the Question in form of an integer
-    + choice_id: 1 (required, number) - ID of the Choice in form of an integer
+    + task_id: 1 (required, number) - ID of the task in form of an integer
+    + check_status: 1 (required, number) - ID of the check status in form of an integer (0 - Uncompleted, 1 - Completed)
+    
 
 ### Vote on a Choice [POST]
 
