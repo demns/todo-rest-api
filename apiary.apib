@@ -33,7 +33,7 @@ A Task object has the following attributes:
 
 + task
 + description
-+ deadline - An ISO8601 date when the question was published.
++ deadline - An ISO8601 date when the task need to be finished.
 + priority
 + category
 + status
@@ -111,7 +111,7 @@ form of choices.
 
 + task (string) - The task
 + description  (string)
-+ deadline (string) - An ISO8601 date when the question was published.
++ deadline (string) - An ISO8601 date when the task need to be finished.
 + priority (string) -- Hi, Medium, Low
 + category (string)
 + status (string)  - Normal, Completed, Overdue values
@@ -119,11 +119,11 @@ form of choices.
 + Request (application/json)
 
         {
-            "task": "First task",
-            "description": "this is the first task",
+            "task": "Second task",
+            "description": "this is the second task",
             "deadline": "2014-11-11T08:40:51.620Z",
             "priority": "High",
-            "category": "first category",
+            "category": "second category",
             "status": "Normal"
         }
 
@@ -131,18 +131,18 @@ form of choices.
 
     + Headers
 
-            Location: /questions/2
+            Location: /tasks/2
 
     + Body
 
             {
-                "task": "First task",
-                "description": "this is the first task",
+                "task": "Second task",
+                "description": "this is the second task",
                 "deadline": "2014-11-11T08:40:51.620Z",
                 "priority": "High",
                 "category": {
-                    "title": "first category",
-                    "url": "/category/1"
+                    "title": "second category",
+                    "url": "/category/2"
                 },
                 "status": "Normal"
             }
