@@ -27,45 +27,46 @@ to keep your client decoupled from implementation details.
 
 Resources related to tasks in the API.
 
-## Tasks [/tasks/{tasks_id}]
+## Tasks [/tasks/{task_id}]
 
 A Tasks object has the following attributes:
 
 + task
 + description
 + deadline - An ISO8601 date when the question was published.
-+ choices - An array of Choice objects.
 + priority
 + category
 + status
 
 + Parameters
-    + question_id: 1 (required, number) - ID of the Question in form of an integer
+    + task_id: 1 (required, number) - ID of the Task in form of an integer
 
 ### View a Questions Detail [GET]
 
 + Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "published_at": "2014-11-11T08:40:51.620Z",
-            "url": "/questions/1",
+            "task": "First task",
+            "description": "this is the first task",
+            "deadline": "2014-11-11T08:40:51.620Z",
+            "priority": "High",
+            "url": "/task/1",
             "choices": [
                 {
                     "choice": "Swift",
-                    "url": "/questions/1/choices/1",
+                    "url": "/task/1/choices/1",
                     "votes": 2048
                 }, {
                     "choice": "Python",
-                    "url": "/questions/1/choices/2",
+                    "url": "/task/1/choices/2",
                     "votes": 1024
                 }, {
                     "choice": "Objective-C",
-                    "url": "/questions/1/choices/3",
+                    "url": "/task/1/choices/3",
                     "votes": 512
                 }, {
                     "choice": "Ruby",
-                    "url": "/questions/1/choices/4",
+                    "url": "/task/1/choices/4",
                     "votes": 256
                 }
             ]
