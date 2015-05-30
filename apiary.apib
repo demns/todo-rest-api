@@ -5,7 +5,7 @@ HOST: http://cdp-todo.apiblueprint.org/
 
 Cdp-todo is an attempt to creat good rest api.
 
-# Polls API Root [/]
+# TODO API Root [/]
 
 This resource does not have any attributes. Instead it offers the initial
 API affordances in the form of the links in the JSON body.
@@ -23,18 +23,21 @@ to keep your client decoupled from implementation details.
             "questions_url": "/questions"
         }
 
-## Group Question
+## Group Tasks
 
-Resources related to questions in the API.
+Resources related to tasks in the API.
 
-## Question [/questions/{question_id}]
+## Tasks [/tasks/{tasks_id}]
 
-A Question object has the following attributes:
+A Tasks object has the following attributes:
 
-+ question
-+ published_at - An ISO8601 date when the question was published.
-+ url
++ task
++ description
++ deadline - An ISO8601 date when the question was published.
 + choices - An array of Choice objects.
++ priority
++ category
++ status
 
 + Parameters
     + question_id: 1 (required, number) - ID of the Question in form of an integer
