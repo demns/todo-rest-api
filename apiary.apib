@@ -32,11 +32,12 @@ Resources related to tasks in the API.
 A Task object has the following attributes:
 
 + task (string) - The task
-+ description  (string)
++ description (string)
 + deadline (string) - An ISO8601 date when the task need to be finished.
 + priority (string) -- Hi, Medium, Low
 + category (string)
 + status (string)  - Normal, Completed, Overdue values
++ url (string) - current url of the task
 
 + Parameters
     + task_id: 1 (required, number) - ID of the Task in form of an integer
@@ -54,7 +55,8 @@ A Task object has the following attributes:
                 "title": "first category",
                 "url": "/category/1"
             },
-            "status": "Normal"
+            "status": "Normal",
+            "url": "/tasks/1"
         }
 
 ## Choice [/tasks/{task_id}/check/{check_status}]
@@ -103,7 +105,8 @@ This action allows you to change the status of the task.
                         "title": "first category",
                         "url": "/category/1"
                     },
-                    "status": "Normal"
+                    "status": "Normal",
+                    "url": "/tasks/1"
                 }
             ]
 
@@ -148,5 +151,6 @@ form of choices.
                     "title": "second category",
                     "url": "/category/2"
                 },
-                "status": "Normal"
+                "status": "Normal",
+                "url": "/tasks/2"
             }
